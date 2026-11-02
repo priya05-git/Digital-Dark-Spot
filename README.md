@@ -168,33 +168,8 @@ The core logic is kept in the `src/lib` folder.
 
 This is where the app turns raw source text into actionable insights.
 
-### 3. Data flow
-The typical execution flow is:
 
-```mermaid
-flowchart LR
-    A[User adds sources / query] --> B[SourcePanel]
-    B --> C[App state]
-    C --> D[Backend fetch + text extraction]
-    D --> E[analyze(sources, topicKey)]
-    E --> F[Coverage]
-    E --> G[Gaps]
-    E --> H[Conflicts]
-    E --> I[Freshness]
-    E --> J[Checklist]
-    F --> K[Dashboard]
-    G --> L[Findings]
-    H --> L
-    I --> L
-    J --> M[Checklist Panel]
-    K --> N[UI output]
-    L --> N
-    M --> N
-```
-
-This visual flow shows how information moves through the app from source collection to final detection output.
-
-### 4. Source processing model
+### 3. Source processing model
 Each source is treated as a separate evidence block with its own text and metadata. The analyzer evaluates each source independently and then compares source-to-source patterns for contradiction or missing coverage.
 
 This allows the app to answer questions like:
@@ -204,7 +179,7 @@ This allows the app to answer questions like:
 - which data conflicts across sources?
 - which source is stale or undated?
 
-### 5. Component interaction design
+### 4. Component interaction design
 The design is intentionally modular:
 
 - input collection and topic selection are separate from output rendering
