@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body { @apply bg-paper font-doodle text-ink dark:bg-night dark:text-paper; background-image: radial-gradient(rgba(120,100,70,.35) .7px, transparent .7px); background-size: 22px 22px; background-attachment: fixed; }
+}
+@layer components {
+  .card { @apply mb-4 rounded-[18px_12px_20px_10px] border-[2.5px] border-ink bg-white/80 p-4 shadow-doodle dark:border-paper dark:bg-night2 dark:shadow-doodleDark; }
+  .btn { @apply rounded-xl border-[2.5px] border-ink bg-crayon px-3 py-2 font-bold text-white shadow-btn transition active:translate-x-[3px] active:translate-y-[3px] active:shadow-none hover:-rotate-1; }
+  .btn-alt { @apply bg-sun text-ink; }
+  .field { @apply mb-2 w-full rounded-lg border-2 border-dashed border-ink bg-paper p-2 text-ink outline-none focus:border-crayon dark:border-paper dark:bg-night dark:text-paper; }
+  .quote { @apply mt-1 block text-sm text-ink/70 dark:text-paper/70; }
+}
