@@ -1,4 +1,4 @@
-# 🖍️ Digital Dark Spot
+# 🖍️ *Digital Dark Spot*
 
 A web app for discovering the missing, conflicting, and outdated information hidden inside a set of sources before making an important decision.
 
